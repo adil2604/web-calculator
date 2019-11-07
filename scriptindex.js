@@ -30,27 +30,55 @@ e.addEventListener('click',function(e){
     console.log('Клик по кнопке e!');
 });
 result.addEventListener('click',function(e){
-    console.log('Клик по кнопке =!');
+
+    let val=getValue();
+    if (val.includes('^')){
+      let splt=val.split('^').map(Number);
+      let index=[]
+      let q=0;
+      for(let i=0;i<val.length;i++){
+        if (val.charAt(i)==='^'){
+          index[q]=i;
+          q++;
+        }
+      }
+      for (let i=1;i<splt.length;i++){
+        splt[i]=Math.pow(splt[i-1],splt[i]);
+      }
+      display.value=splt[splt.length-1]
+    }
+
+    ///ans=Math.pow(parseFloat(val.substring(0,i)),parseFloat(val.substring(i+1)))
+    //console.log(ans);
 });
+
 AC.addEventListener('click',function(e){
-    console.log('Клик по кнопке AC!');
+  display.value=0;
 });
 decimalBtn.addEventListener('click',decimal);
 factorial.addEventListener('click',function(e){
-    console.log('Клик по кнопке x!!');
+  ans=1;
+    for(let i=1;i<parseFloat(getValue());i++){
+      ans*=i;
+    }
+    display.value=ans;
 });
 sqr.addEventListener('click',function(e){
-    console.log('Клик по кнопке x^2!');
+    display.value=parseFloat(getValue())*parseFloat(getValue());
 });
 square.addEventListener('click',function(e){
-    console.log('Клик по кнопке x!');
+    display.value=getValue()+'^';
+
 });
 ln.addEventListener('click',function(e){
     console.log('Клик по кнопке ln!');
 });
 log.addEventListener('click',function(e){
-    console.log('Клик по кнопке log!');
+  display.value=getBaseLog(10,parseFloat(getValue()));
 });
+function getBaseLog(x, y) {
+  return Math.log(y) / Math.log(x);
+}
 function numberPress(number){
     if (MemoryNewNumber) {
         display.value=number;
@@ -60,7 +88,7 @@ function numberPress(number){
            display.value=number;
        } else{
            display.value+=number;
-       }; 
+       };
     };
 };
 
@@ -93,3 +121,16 @@ function decimal(argument){
 function clear(argument){
 
 };
+
+window.addEventListener('keydown',function (e) {
+  
+})
+
+
+
+
+function getValue() {
+  display=document.getElementById('display');
+  return display.value;
+
+}
