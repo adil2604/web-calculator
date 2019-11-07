@@ -71,6 +71,7 @@ square.addEventListener('click',function(e){
 
 });
 ln.addEventListener('click',function(e){
+    // display.value = Math.log(parseFloat(getValue()));
     console.log('Клик по кнопке ln!');
 });
 log.addEventListener('click',function(e){
@@ -119,7 +120,7 @@ function decimal(argument){
     console.log('Клик по кнопке с .!');
 };
 function clear(argument){
-
+    display.value = 0;
 };
 
 window.addEventListener('keydown',function (e) {
