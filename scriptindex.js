@@ -71,7 +71,7 @@ square.addEventListener('click',function(e){
 
 });
 ln.addEventListener('click',function(e){
-    // display.value = Math.log(parseFloat(getValue()));
+    display.value = Math.log(parseFloat(getValue()));
     console.log('Клик по кнопке ln!');
 });
 log.addEventListener('click',function(e){
