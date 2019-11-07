@@ -107,6 +107,8 @@ function operation(op){
             MemoryCurrentNumber*=parseFloat(localOperationMemory);
         } else if (MemoryPendingOperation === '/'){
             MemoryCurrentNumber/=parseFloat(localOperationMemory);
+        } else if (MemoryPendingOperation === '%'){
+            MemoryCurrentNumber = MemoryCurrentNumber % parseFloat(localOperationMemory);
         } else {
             MemoryCurrentNumber=parseFloat(localOperationMemory);
         };
