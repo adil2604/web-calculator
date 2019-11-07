@@ -14,37 +14,39 @@
     </div>
     <div class="calculator-box">
       <div class="calculator" >
-        <div class="Input"><input type="text" name="" value=""></div>
-        <div class="AC"><button type="button" name="button">AC</button></div>
-        <div class="log"><button type="button" name="button">log</button></div>
-        <div class="sqrt"><button type="button" name="button">√</button></div>
-        <div class="ln"><button type="button" name="button">ln</button></div>
+        <div class="Input"><input disabled type="text" name="" value="0" id='display'></div>
+        <div class="AC"><button type="button" name="button"
+          id="AC">AC</button></div>
+        <div class="log"><button type="button" name="button" id="log">log</button></div>
+        <div class="sqrt operation"><button type="button" name="button">√</button></div>
+        <div class="ln"><button type="button" name="button" id="ln">ln</button></div>
 
-        <div class="e"><button type="button" name="button">e</button></div>
-        <div class="zero w"><button type="button" name="button">0</button></div>
-        <div class="three w"><button type="button" name="button">3</button></div>
-        <div class="two w"><button type="button" name="button">2</button></div>
-        <div class="one w"><button type="button" name="button">1</button></div>
-        <div class="four w"><button type="button" name="button">4</button></div>
-        <div class="five w"><button type="button" name="button">5</button></div>
-        <div class="six w"><button type="button" name="button">6</button></div>
-        <div class="nine w"><button type="button" name="button">9</button></div>
-        <div class="eight w"><button type="button" name="button">8</button></div>
-        <div class="seven w"><button type="button" name="button">7</button></div>
-        <div class="div"><button type="button" name="button">/</button></div>
-        <div class="multp"><button type="button" name="button">*</button></div>
-        <div class="minus"><button type="button" name="button">-</button></div>
-        <div class="plus"><button type="button" name="button">+</button></div>
-        <div class="result"><button type="button" name="button">=</button></div>
-        <div class="persent"><button type="button" name="button">%</button></div>
-        <div class="dot w"><button type="button" name="button">.</button></div>
-        <div class="square-of"><button type="button" name="button">x<sup>y</sup></button></div>
-        <div class="sqr"><button type="button" name="button">x<sup>2</sup></button></div>
-        <div class="factorial"><button type="button" name="button">x!</button></div>
+        <div class="e"><button type="button" name="button" id="e">e</button></div>
+        <div class="number zero w"><button type="button" name="button">0</button></div>
+        <div class="number three w"><button type="button" name="button">3</button></div>
+        <div class="number two w"><button type="button" name="button">2</button></div>
+        <div class="number one w"><button type="button" name="button">1</button></div>
+        <div class="number four w"><button type="button" name="button">4</button></div>
+        <div class="number five w"><button type="button" name="button">5</button></div>
+        <div class="number six w"><button type="button" name="button">6</button></div>
+        <div class="number nine w"><button type="button" name="button">9</button></div>
+        <div class="number eight w"><button type="button" name="button">8</button></div>
+        <div class="number seven w"><button type="button" name="button">7</button></div>
+        <div class="div operation"><button type="button" name="button">/</button></div>
+        <div class="multp operation"><button type="button" name="button">*</button></div>
+        <div class="minus operation"><button type="button" name="button">-</button></div>
+        <div class="plus operation"><button type="button" name="button">+</button></div>
+        <div class="result"><button type="button" name="result" id="result">=</button></div>
+        <div class="persent operation"><button type="button" name="button">%</button></div>
+        <div class="dot w"><button type="button" name="button" id="decimal">.</button></div>
+        <div class="square-of"><button type="button" name="button" id="square">x<sup>y</sup></button></div>
+        <div class="sqr"><button type="button" name="button" id="sqr">x<sup>2</sup></button></div>
+        <div class="factorial"><button type="button" name="x!" id="factorial">x!</button></div>
         </div>
 
 
       </div>
     </div>
+    <script src="scriptindex.js"></script>
   </body>
 </html>
