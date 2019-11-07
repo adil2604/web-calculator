@@ -118,6 +118,11 @@ function operation(op){
 
 function decimal(argument){
     console.log('Клик по кнопке с .!');
+    if(getValue().includes('.')) {
+        return;
+    } else {
+        display.value = getValue()+'.';
+    }
 };
 function clear(argument){
     display.value = 0;
